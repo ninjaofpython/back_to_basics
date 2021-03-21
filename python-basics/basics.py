@@ -1,5 +1,11 @@
-days_to_minute_conversion = 60 * 24
-calculation_to_seconds = 24 * 60 * 60
-minutes_in_20_days = days_to_minute_conversion * 20
-print(f"There are {minutes_in_20_days} minutes in 20 days.")
-print(f"There are {35 * calculation_to_seconds} seconds in 35 days.")
+calculation_of_units = 24
+name_of_unit = "hours"
+
+def days_to_units(num_of_days, custom_message):
+    print(f"{num_of_days} days are {num_of_days * calculation_of_units} {name_of_unit}") 
+    print(custom_message)
+
+
+
+days_to_units(45.5, "Awesome!")
+days_to_units(91.5, "Looks good!")
