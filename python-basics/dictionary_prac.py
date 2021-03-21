@@ -7,7 +7,7 @@ def days_to_units(num_of_days):
 
 def validate_and_execute():
     try:
-        user_input_number = int(num_of_days_element)
+        user_input_number = int(days_and_unit_dictionary["days"])
         if user_input_number > 0:
             calculated_value = days_to_units(user_input_number)
             print(calculated_value)
@@ -22,13 +22,9 @@ def validate_and_execute():
 user_input = ""
 
 while user_input != "exit":
-    user_input = input("Hey user enter a number of days as a comma separated list.\n")
-    list_of_days = user_input.split(", ")
-    print(list_of_days)
-    print(set(list_of_days))
-    print(type(list_of_days))
-    print(type(set(list_of_days)))
-    set_days = set(user_input.split(", "))
-    for num_of_days_element in set_days:
-        print(num_of_days_element)
-        validate_and_execute()
+    user_input = input("Hey user enter a number of days and conversion unit.\n")
+    days_and_unit = user_input.split(":")
+    print(days_and_unit)
+    days_and_unit_dictionary = {"days": days_and_unit[0], "unit": days_and_unit[1]}
+    validate_and_execute()
+    
